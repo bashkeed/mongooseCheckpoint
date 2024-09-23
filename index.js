@@ -12,7 +12,7 @@ connectDB()
 
 
 app.get('/', (req,res)=>{
-    res.send(`Welcome to GoMyCode`)
+    res.send('<h2 style=color:orange;text-align:center >Welcome to Gomycode</h2>')
 })
 
 app.get('/add/:name/:age', async(req, res)=>{
@@ -23,7 +23,7 @@ app.get('/add/:name/:age', async(req, res)=>{
 
 })
 
-// question one
+// question 1
 app.get('/records',async(req,res)=>{
     try {
         
@@ -158,7 +158,7 @@ app.get('/chainSearch',async(req,res)=>{
   res.json(findRecord)
 })
 
-
-app.listen(3002, ()=>{
-    console.log('server is running on port 3002')
+const port= 3002;
+app.listen(port, ()=>{
+    console.log(`server is running on port ${port}`);
 })
